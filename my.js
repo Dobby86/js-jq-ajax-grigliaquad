@@ -7,24 +7,50 @@
 // Il numero ottenuto appare al centro del quadrato
 $(document).ready(function() {
 
-$.ajax({
-    url : "https://flynn.boolean.careers/exercises/api/random/int",
-    method : "GET",
-    success : function (data,stato) {
-        console.log(data.response , data.success);
-        if (data.response <=5){
-        $("h1").addClass("yellow");
-    }else {
-        $("h1").addClass("green");
-    }
-    $("h1").text(data.response);
-
-    },
-    error : function (richiesta,stato,errori) {
-        console.log("e un errore. " + errori,  stato, richiesta  );
-    }
-})
+    $(".quadrato").click(
+        function () {
+            var spero = this;
+            var numero = $("h1");
 
 
+
+            $.ajax({
+                url : "https://flynn.boolean.careers/exercises/api/random/int",
+                method : "GET",
+                success : function (data,stato) {
+                    console.log(data.response , data.success);
+
+
+                        var minore = (data.response <=5);
+                        var maggiore = (data.response > 5);
+
+                        if (minore){
+                        $(spero).css("background","yellow");
+
+
+
+                        }else {
+                        $(spero).css("background","green");
+
+
+                        }
+
+                        $(spero).text(data.response);
+
+
+                    },
+
+                    error : function (richiesta,stato,errori) {
+                        console.log("e un errore. " + errori,  stato, richiesta
+                      );}
+
+             }
+         )
+
+
+
+   }
+)
 // fine
-});
+}
+);
