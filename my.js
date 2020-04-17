@@ -6,15 +6,22 @@
 // se è > di 5 il quadrato diventa verde.
 // Il numero ottenuto appare al centro del quadrato
 $(document).ready(function() {
+
 $.ajax({
     url : "https://flynn.boolean.careers/exercises/api/random/int",
     method : "GET",
     success : function (data,stato) {
         console.log(data.response , data.success);
-        $("h1").text(data.response);
+        if (data.response <=5){
+        $("h1").addClass("yellow");
+    }else {
+        $("h1").addClass("green");
+    }
+    $("h1").text(data.response);
+
     },
     error : function (richiesta,stato,errori) {
-        console.log("e un errore. " + errori, "stato " + stato, richiesta  );
+        console.log("e un errore. " + errori,  stato, richiesta  );
     }
 })
 
