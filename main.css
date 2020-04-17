@@ -1,0 +1,29 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.piazza {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.quadrato {
+    border: 1px solid black;
+    height: calc(100% / 6);
+    width:  calc(100% / 6);
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: darkgreen;
+}
