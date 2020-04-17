@@ -13,30 +13,31 @@ $(document).ready(function() {
             var numero = $("h1");
 
 
-
             $.ajax({
                 url : "https://flynn.boolean.careers/exercises/api/random/int",
                 method : "GET",
                 success : function (data,stato) {
                     console.log(data.response , data.success);
 
-
                         var minore = (data.response <=5);
                         var maggiore = (data.response > 5);
+                        // test
+                    
 
                         if (minore){
+
                         $(spero).css("background","yellow");
 
 
 
                         }else {
+
                         $(spero).css("background","green");
 
-
                         }
-
-                        $(spero).text(data.response);
-
+                       // soluzione stampata
+                         var risultato = $(spero).text(data.response);
+                        risultato.append( '<h1 >' + data.response +  '</h1> ');
 
                     },
 
