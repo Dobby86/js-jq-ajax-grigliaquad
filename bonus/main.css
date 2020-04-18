@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 .points {
+
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    float: left;
+    flex-direction: column;
 }
 
 .container {
@@ -22,12 +23,13 @@ header {
     background-color:black;
 }
 h1{
-    font-size: 50px;
+    font-size: 65px;
     text-align: center;
 }
 h3 {
     font-size: 65px;
     color: darkorange;
+    text-align: center;
 }
 p {
     font-size: 65px;
@@ -52,7 +54,7 @@ span {
 }
 .quadrato {
     border: 1px solid red;
-    height: calc(100% / 7);
+    height: calc(100% /7);
     width:  calc(100% / 7);
     border-radius: 20px;
     background-image: url(https://static1.bigstockphoto.com/1/4/3/large2/341216503.jpg);

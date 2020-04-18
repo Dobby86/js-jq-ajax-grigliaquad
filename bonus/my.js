@@ -25,7 +25,7 @@ $(document).ready(function() {
 
                         var minore = (data.response <=5);
                         var maggiore = (data.response > 5);
-                        var vittoria = "wow!!";
+                        var vittoria = "win!!";
 
                         // test
                         if ($(questo).hasClass("active"))  {
