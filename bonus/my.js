@@ -6,11 +6,16 @@
 // se è > di 5 il quadrato diventa verde.
 // Il numero ottenuto appare al centro del quadrato
 $(document).ready(function() {
+    var Pgialli = 0;
+    var Pverdi = 0;
+
 
     $(".quadrato").click(
         function () {
             var questo = this;
             var numero = $("h1");
+            var giaClick = "eh eh he ..Hai gia  cliccato!!"
+
 
             $.ajax({
                 url : "https://flynn.boolean.careers/exercises/api/random/int",
@@ -20,15 +25,39 @@ $(document).ready(function() {
 
                         var minore = (data.response <=5);
                         var maggiore = (data.response > 5);
-                        // test
+                        var vittoria = "wow!!";
 
-                        if (minore){
+                        // test
+                        if ($(questo).hasClass("active"))  {
+                            alert(giaClick);
+
+
+
+
+                        }if (data.response >= 9) {
+
+
+                            $(questo).css("background","yellow").append( '<h1 >' + vittoria +  '</h1> ');
+                            // bonusssssssssss
+                            alert("wooooooooooooooooowwwwwwwww");
+                        }else if (minore){
 
                         $(questo).css("background","yellow").append( '<h1 >' + data.response +  '</h1> ');
+                        // bonusssssssssss
+                        $(questo).addClass("active");
+                        // bonusssssssssss
+
+                        Pgialli ++ ;
+                        $(".iGialli").html("N° gialli clickate: " + Pgialli);
 
                         }else {
 
                         $(questo).css("background","green").append( '<h1 >' + data.response +  '</h1> ');
+                        // bonusssssssssss
+                        $(questo).addClass("active");
+                        // bonusssssssssss
+                        Pverdi ++;
+                        $(".Iverdi").html("N° verdi clickate: " + Pverdi);
 
                         }
                        // soluzione stampata

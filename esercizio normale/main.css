@@ -1,0 +1,62 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.hdqwalls.com/wallpapers/the-game-is-on-3m.jpg);
+}
+header {
+    background-color:black;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+h3 {
+    font-size: 65px;
+    color: darkorange;
+}
+p {
+    font-size: 65px;
+    color: orange;
+    text-align: center;
+}
+h2 {
+    font-size: 65px;
+    color: darkorange;
+    text-align: center;
+}
+span {
+    font-size: 65px;
+    color: darkorange;
+    text-align: center;
+}
+.piazza {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.quadrato {
+    border: 1px solid red;
+    height: calc(100% / 7);
+    width:  calc(100% / 7);
+    border-radius: 20px;
+    background-image: url(https://static1.bigstockphoto.com/1/4/3/large2/341216503.jpg);
+    margin:1px 1px;
+
+
+}
