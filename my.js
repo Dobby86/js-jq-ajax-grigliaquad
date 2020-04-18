@@ -9,9 +9,8 @@ $(document).ready(function() {
 
     $(".quadrato").click(
         function () {
-            var spero = this;
+            var questo = this;
             var numero = $("h1");
-
 
             $.ajax({
                 url : "https://flynn.boolean.careers/exercises/api/random/int",
@@ -22,22 +21,20 @@ $(document).ready(function() {
                         var minore = (data.response <=5);
                         var maggiore = (data.response > 5);
                         // test
-                    
 
                         if (minore){
 
-                        $(spero).css("background","yellow");
-
-
+                        $(questo).css("background","yellow").append( '<h1 >' + data.response +  '</h1> ');
 
                         }else {
 
-                        $(spero).css("background","green");
+                        $(questo).css("background","green").append( '<h1 >' + data.response +  '</h1> ');
 
                         }
                        // soluzione stampata
-                         var risultato = $(spero).text(data.response);
-                        risultato.append( '<h1 >' + data.response +  '</h1> ');
+                        //  var risultato = $(questo).text(data.response);
+                        //
+                        // risultato.append( '<h1 >' + data.response +  '</h1> ');
 
                     },
 
