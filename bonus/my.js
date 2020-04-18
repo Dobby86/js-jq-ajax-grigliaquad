@@ -37,7 +37,8 @@ $(document).ready(function() {
                         }if (data.response >= 9) {
 
 
-                            $(questo).css("background","yellow").append( '<h1 >' + vittoria +  '</h1> ');
+                            $(questo).css("background","red").append('<h1 >' + vittoria +  '</h1>');
+
                             // bonusssssssssss
                             alert("wooooooooooooooooowwwwwwwww");
                         }else if (minore){
@@ -48,7 +49,7 @@ $(document).ready(function() {
                         // bonusssssssssss
 
                         Pgialli ++ ;
-                        $(".iGialli").html("N° gialli clickate: " + Pgialli);
+                        $(".iGialli").html("N° gialli clickati: " + Pgialli);
 
                         }else {
 
@@ -57,7 +58,7 @@ $(document).ready(function() {
                         $(questo).addClass("active");
                         // bonusssssssssss
                         Pverdi ++;
-                        $(".Iverdi").html("N° verdi clickate: " + Pverdi);
+                        $(".Iverdi").html("N° verdi clickati: " + Pverdi);
 
                         }
                        // soluzione stampata
