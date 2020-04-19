@@ -14,7 +14,7 @@ $(document).ready(function() {
         function () {
             var questo = this;
             var numero = $("h1");
-            var giaClick = "eh eh he ..Hai gia  cliccato!!"
+            var giaClick = "eh eh he ..Hai gia  cliccato!!";
 
 
             $.ajax({
@@ -26,16 +26,11 @@ $(document).ready(function() {
                         var minore = (data.response <=5);
                         var maggiore = (data.response > 5);
                         var vittoria = "win!!";
-
                         // test
                         if ($(questo).hasClass("active"))  {
                             alert(giaClick);
 
-
-
-
                         }if (data.response >= 9) {
-
 
                             $(questo).css("background","red").append('<h1 >' + vittoria +  '</h1>');
 
@@ -43,9 +38,13 @@ $(document).ready(function() {
                             alert("wooooooooooooooooowwwwwwwww");
                         }else if (minore){
 
-                        $(questo).css("background","yellow").append( '<h1 >' + data.response +  '</h1> ');
+                        $(questo).css("background","yellow");
+                        $(questo).find("h1").remove();
+                        $(questo).append( '<h1 >' + data.response +  '</h1> ');
+
                         // bonusssssssssss
                         $(questo).addClass("active");
+
                         // bonusssssssssss
 
                         Pgialli ++ ;
@@ -53,7 +52,9 @@ $(document).ready(function() {
 
                         }else {
 
-                        $(questo).css("background","green").append( '<h1 >' + data.response +  '</h1> ');
+                        $(questo).css("background","green");
+                        $(questo).find("h1").remove();
+                        $(questo).append( '<h1 >' + data.response +  '</h1> ');
                         // bonusssssssssss
                         $(questo).addClass("active");
                         // bonusssssssssss
@@ -65,20 +66,19 @@ $(document).ready(function() {
                         //  var risultato = $(questo).text(data.response);
                         //
                         // risultato.append( '<h1 >' + data.response +  '</h1> ');
+                       },
 
-                    },
-
-                    error : function (richiesta,stato,errori) {
+                    error: function (richiesta,stato,errori) {
                         console.log("e un errore. " + errori,  stato, richiesta
                       );}
 
              }
-         )
+         );
 
 
 
    }
-)
+);
 // fine
 }
 );
